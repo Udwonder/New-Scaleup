@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Heart } from 'lucide-react';
+import { DonateModal } from './DonateModal';
 
 export function Donate() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="py-24 bg-brand-blue text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,7 +25,7 @@ export function Donate() {
             transition={{ delay: 0.1 }}
             className="text-xl text-[#b3b3ff] leading-relaxed mb-12"
           >
-            100% of your donation goes directly toward program costs—from hosting SME websites to providing internet access for our coding students.
+            Your entire donation goes straight to our programs, helping us build and host SME websites and to provide the power, and internet access our students need to succeed.
           </motion.p>
           
           <motion.div
@@ -31,6 +35,7 @@ export function Donate() {
             transition={{ delay: 0.2 }}
           >
             <motion.button
+              onClick={() => setIsModalOpen(true)}
               whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.2)" }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center px-8 py-4 text-lg font-bold rounded-full bg-brand-green text-brand-blue hover:bg-[#6bc239] transition-colors"
@@ -41,6 +46,7 @@ export function Donate() {
           </motion.div>
         </div>
       </div>
+      <DonateModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

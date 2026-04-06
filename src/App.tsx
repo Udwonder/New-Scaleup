@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { ThemeProvider } from './components/ThemeProvider';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { BackToTopButton } from './components/BackToTopButton';
 import { Home } from './pages/Home';
 import { AboutPage } from './pages/AboutPage';
 import { ProjectsPage } from './pages/ProjectsPage';
@@ -43,6 +44,7 @@ export default function App() {
               <Route path="/blog" element={<BlogPage />} />
             </Routes>
           </main>
+          <BackToTopButton />
           <ConditionalPartners />
           <Footer />
         </div>

@@ -1,4 +1,4 @@
-import { Facebook, Linkedin, Instagram, Twitter, MapPin } from 'lucide-react';
+import { Facebook, Linkedin, Instagram, Twitter, MapPin, Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export function Footer() {
@@ -33,11 +33,11 @@ export function Footer() {
           </div>
 
           <div className="text-center md:text-left">
-            <h4 className="text-white font-bold mb-4">Sections</h4>
+            <h4 className="text-brand-green font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {sections.map((section) => (
                 <li key={section.name}>
-                  <Link to={section.href} className="text-sm hover:text-brand-green transition-colors">
+                  <Link to={section.href} className="text-sm text-white hover:text-brand-green transition-colors">
                     {section.name}
                   </Link>
                 </li>
@@ -46,16 +46,24 @@ export function Footer() {
           </div>
 
           <div className="text-center md:text-left">
-            <h4 className="text-white font-bold mb-4">Contact</h4>
-            <p className="text-sm mb-4 flex items-start">
+            <h4 className="text-brand-green font-bold mb-4">Contact</h4>
+            <a href="https://maps.app.goo.gl/TCV3nHfTSCbGTEHx7" target="_blank" rel="noopener noreferrer" className="text-sm mb-4 flex items-start justify-center md:justify-start hover:text-brand-green transition-colors">
               <MapPin size={16} className="mr-2 mt-0.5 flex-shrink-0 text-brand-green" />
               <span>
                 25 Yakubu Gowon Crescent,<br />
                 Asokoro, Abuja, Nigeria.
               </span>
+            </a>
+            <p className="text-sm mb-2 flex items-center justify-center md:justify-start">
+              <Mail size={16} className="mr-2 flex-shrink-0 text-brand-green" />
+              <a href="mailto:meetus@scaleupfoundation.org" className="hover:text-brand-green transition-colors">meetus@scaleupfoundation.org</a>
+            </p>
+            <p className="text-sm mb-4 flex items-center justify-center md:justify-start">
+              <Phone size={16} className="mr-2 flex-shrink-0 text-brand-green" />
+              <a href="tel:+2348062375026" className="hover:text-brand-green transition-colors">+234 806 237 5026</a>
             </p>
             <a href="https://share.google/PG0s3cVNsmnXhsa9I" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm hover:text-brand-green transition-colors">
-              <MapPin size={16} className="mr-2" />
+              <MapPin size={16} className="mr-2 text-brand-green" />
               Google Business Profile
             </a>
           </div>

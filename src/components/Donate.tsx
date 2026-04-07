@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { DonateModal } from './DonateModal';
 
 export function Donate() {
@@ -43,6 +44,11 @@ export function Donate() {
               <Heart className="w-5 h-5 mr-2" />
               Donate Now
             </motion.button>
+            <div className="mt-6">
+              <Link to="/projects" className="text-[#b3b3ff] hover:text-white transition-colors underline underline-offset-4">
+                Learn more about Project Leap
+              </Link>
+            </div>
           </motion.div>
         </div>
       </div>

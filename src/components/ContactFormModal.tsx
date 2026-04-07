@@ -16,15 +16,25 @@ export function ContactFormModal({ isOpen, onClose, formType }: ContactFormModal
     e.preventDefault();
     setStatus('submitting');
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      console.log('Form submitted:', { formType, ...formData });
-      setStatus('success');
-      setTimeout(() => {
-        onClose();
-        setStatus('idle');
-        setFormData({ name: '', email: '', message: '' });
-      }, 2000);
+      const url = formType === 'partner' ? 'https://formspree.io/f/xwvwyvej' : 'https://formspree.io/f/meepneql';
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ formType, ...formData }),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setTimeout(() => {
+          onClose();
+          setStatus('idle');
+          setFormData({ name: '', email: '', message: '' });
+        }, 2000);
+      } else {
+        throw new Error('Failed to send');
+      }
     } catch (error) {
       setStatus('error');
     }
@@ -52,11 +62,11 @@ export function ContactFormModal({ isOpen, onClose, formType }: ContactFormModal
                 <X size={24} />
               </button>
               <h2 id="modal-title" className="text-2xl font-bold text-brand-blue dark:text-white mb-6">
-                {formType === 'volunteer' ? 'Sign Up to Volunteer' : 'Become a Corporate Partner'}
+                {formType === 'volunteer' ? 'Become a Volunteer' : 'Become a Corporate Partner'}
               </h2>
               {status === 'success' ? (
                 <div className="text-center py-8">
-                  <p className="text-green-500 font-semibold">Thank you! Your message has been sent.</p>
+                  <p className="text-green-500 font-semibold">Thank you! Your application to {formType === 'volunteer' ? 'Become a Volunteer' : 'Become a Corporate Partner'} has been submitted.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4" aria-labelledby="modal-title">

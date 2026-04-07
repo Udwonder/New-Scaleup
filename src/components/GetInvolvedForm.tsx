@@ -16,15 +16,24 @@ export function GetInvolvedForm({ isOpen, onClose, type }: GetInvolvedFormProps)
     e.preventDefault();
     setStatus('submitting');
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      console.log('Form submitted:', { ...formData, type });
-      setStatus('success');
-      setTimeout(() => {
-        onClose();
-        setStatus('idle');
-        setFormData({ name: '', email: '', message: '' });
-      }, 2000);
+      const response = await fetch('https://formspree.io/f/mgopdvgd', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...formData, type }),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setTimeout(() => {
+          onClose();
+          setStatus('idle');
+          setFormData({ name: '', email: '', message: '' });
+        }, 2000);
+      } else {
+        throw new Error('Failed to send');
+      }
     } catch (error) {
       setStatus('error');
     }

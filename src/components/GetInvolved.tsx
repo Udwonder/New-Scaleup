@@ -27,7 +27,7 @@ export function GetInvolved() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-slate-50 dark:bg-slate-800 p-10 rounded-3xl border border-slate-100 dark:border-slate-700 flex flex-col h-full"
+            className="bg-slate-100 dark:bg-slate-800 p-10 rounded-3xl border border-slate-200 dark:border-slate-700 flex flex-col h-full"
           >
             <div className="w-16 h-16 bg-[#f2fceb] dark:bg-brand-green/10 rounded-full flex items-center justify-center mb-8">
               <HeartHandshake className="w-8 h-8 text-brand-green" />
@@ -43,7 +43,7 @@ export function GetInvolved() {
               onClick={() => openModal('volunteer')}
               className="w-full sm:w-auto bg-brand-blue hover:bg-[#0a0a8a] dark:bg-brand-green dark:hover:bg-[#6bc239] dark:text-brand-blue text-white px-8 py-4 rounded-full font-semibold transition-colors"
             >
-              Sign Up to Volunteer
+              Become a Volunteer
             </motion.button>
           </motion.div>
 
@@ -61,7 +61,7 @@ export function GetInvolved() {
             <h3 className="text-sm font-bold text-brand-green uppercase tracking-widest mb-2">For Partners</h3>
             <h4 className="text-3xl font-bold text-white mb-4">Let's Scale Together.</h4>
             <p className="text-slate-300 leading-relaxed mb-8 flex-grow">
-              We collaborate with corporations, NGOs, and governments to create sustainable systems of growth. Partner with us to fund a project or co-create a training program.
+              We collaborate with corporations, NGOs, and governments to create sustainable systems of growth. Partner with us to fund a project or co-create a project.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -69,7 +69,7 @@ export function GetInvolved() {
               onClick={() => openModal('partner')}
               className="w-full sm:w-auto bg-brand-green hover:bg-[#6bc239] text-brand-blue px-8 py-4 rounded-full font-semibold transition-colors"
             >
-              Become a Corporate Partner
+              Partner with us
             </motion.button>
           </motion.div>
         </div>

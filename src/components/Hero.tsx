@@ -44,7 +44,7 @@ export function Hero() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-3xl mx-auto"
           >
-            We are a global non-profit dedicated to bridging the digital divide. From building 5,000 SME websites to training the next generation of AI leaders, we turn local potential into global impact.
+            We are a global non-profit dedicated to bridging the digital divide. From building 5,000 free SME websites through our <Link to="/projects" className="text-brand-green font-semibold hover:underline">Project Leap</Link>, to training the next generation of AI leaders, we turn local potential into global impact.
           </motion.p>
         </div>
 

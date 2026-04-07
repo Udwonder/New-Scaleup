@@ -20,12 +20,21 @@ export function Contact() {
     e.preventDefault();
     setStatus('submitting');
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      console.log('Form submitted:', formData);
-      setStatus('success');
-      setFormData({ firstName: '', lastName: '', email: '', subject: '', message: '' });
-      setTimeout(() => setStatus('idle'), 3000);
+      const response = await fetch('https://formspree.io/f/mgopdvgd', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ firstName: '', lastName: '', email: '', subject: '', message: '' });
+        setTimeout(() => setStatus('idle'), 3000);
+      } else {
+        throw new Error('Failed to send');
+      }
     } catch (error) {
       setStatus('error');
       setTimeout(() => setStatus('idle'), 3000);

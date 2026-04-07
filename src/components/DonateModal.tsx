@@ -36,7 +36,7 @@ export function DonateModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
                     onClick={() => setActiveCurrency(currency as keyof typeof bankDetails)}
                     className={`py-4 rounded-2xl text-2xl font-bold transition-all ${activeCurrency === currency ? 'bg-brand-green text-brand-blue shadow-lg' : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'}`}
                   >
-                    {currency}
+                    {bankDetails[currency as keyof typeof bankDetails].sign} {currency}
                   </button>
                 ))}
               </div>

@@ -8,6 +8,7 @@ import { ThemeProvider } from './components/ThemeProvider';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { BackToTopButton } from './components/BackToTopButton';
+import { WhatsAppButton } from './components/WhatsAppButton';
 import { Home } from './pages/Home';
 import { AboutPage } from './pages/AboutPage';
 import { ProjectsPage } from './pages/ProjectsPage';
@@ -45,6 +46,7 @@ export default function App() {
             </Routes>
           </main>
           <BackToTopButton />
+          <WhatsAppButton />
           <ConditionalPartners />
           <Footer />
         </div>

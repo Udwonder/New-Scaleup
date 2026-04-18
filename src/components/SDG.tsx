@@ -12,7 +12,7 @@ export function SDG() {
     },
     { 
       num: "8", 
-      title: "Decent Work & Growth", 
+      title: "Decent Work and Economic Growth", 
       description: "By empowering individuals with practical business skills, we stimulate job creation and foster sustainable economic growth in local communities.",
       color: "bg-brand-blue",
       icon: <Briefcase className="w-8 h-8 text-brand-green" />
@@ -35,9 +35,6 @@ export function SDG() {
 
   return (
     <section className="py-24 bg-slate-50 dark:bg-slate-950 text-brand-blue dark:text-white relative transition-colors duration-300">
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,_#04045e_1px,_transparent_1px)] dark:bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,0.1)_1px,_transparent_1px)] bg-[length:20px_20px]"></div>
-      </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">

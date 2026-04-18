@@ -60,7 +60,7 @@ export function Footer() {
             </p>
             <p className="text-sm mb-4 flex items-center justify-center md:justify-start">
               <Phone size={16} className="mr-2 flex-shrink-0 text-brand-green" />
-              <a href="tel:+2348062375026" className="hover:text-brand-green transition-colors">+234 806 237 5026</a>
+              <a href="tel:+2349039847030" className="hover:text-brand-green transition-colors">+234 903 984 7030</a>
             </p>
             <a href="https://share.google/PG0s3cVNsmnXhsa9I" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm hover:text-brand-green transition-colors">
               <MapPin size={16} className="mr-2 text-brand-green" />

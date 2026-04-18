@@ -102,8 +102,8 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-brand-blue dark:text-white mb-1">Call Us</h4>
-                  <a href="tel:+2348062375026" className="text-slate-600 dark:text-slate-400 hover:text-brand-green transition-colors">
-                    +234 806 237 5026
+                  <a href="tel:+2349039847030" className="text-slate-600 dark:text-slate-400 hover:text-brand-green transition-colors">
+                    +234 903 984 7030
                   </a>
                 </div>
               </div>
@@ -116,8 +116,8 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-brand-blue dark:text-white mb-1">WhatsApp</h4>
-                  <a href="https://wa.me/2348062375026" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-brand-green transition-colors">
-                    +234 806 237 5026
+                  <a href="https://wa.me/2349039847030" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-brand-green transition-colors">
+                    +234 903 984 7030
                   </a>
                 </div>
               </div>

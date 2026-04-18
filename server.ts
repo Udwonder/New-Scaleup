@@ -6,8 +6,18 @@ import Stripe from "stripe";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// Initialize Stripe with secret key
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "");
+// Initialize Stripe lazily
+let stripeClient: Stripe | null = null;
+function getStripe(): Stripe {
+  if (!stripeClient) {
+    const key = process.env.STRIPE_SECRET_KEY;
+    if (!key) {
+      console.warn("STRIPE_SECRET_KEY is not set. Stripe functionality will be disabled.");
+    }
+    stripeClient = new Stripe(key || "dummy_key_for_no_crash");
+  }
+  return stripeClient;
+}
 
 async function startServer() {
   const app = express();
@@ -26,7 +36,7 @@ async function startServer() {
   app.post("/api/create-checkout-session", async (req, res) => {
     try {
       const { amount, currency } = req.body;
-      const session = await stripe.checkout.sessions.create({
+      const session = await getStripe().checkout.sessions.create({
         payment_method_types: ['card'],
         line_items: [
           {

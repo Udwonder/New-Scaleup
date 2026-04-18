@@ -1,11 +1,20 @@
 import { motion } from 'motion/react';
-import { Target, Eye, Users, Leaf, Zap, Rocket } from 'lucide-react';
+import { Target, Eye, Users, Leaf, Zap, Rocket, Linkedin } from 'lucide-react';
 import { Carousel } from './Carousel';
 
 export function About() {
   const journeyImages = [
     "https://i.imgur.com/oMFyZ6B.jpeg",
     "https://i.imgur.com/cTOdH8l.jpeg"
+  ];
+
+  const teamMembers = [
+    { name: "Enomfon Akpan", role: "Project Manager", image: "https://imgur.com/gGLga5c.png", linkedin: "https://www.linkedin.com/in/enomfon-akpan-a9552594/" },
+    { name: "Enomfon Essien", role: "Operations Lead", image: "https://imgur.com/KMWjpMh.png", linkedin: "https://web.facebook.com/richnora.essien" },
+    { name: "Jedidiah Gabriel", role: "Director of Engineering", image: "https://imgur.com/fo6hdGJ.png", linkedin: "https://www.linkedin.com/in/enomfon-akpan-a9552594/" },
+    { name: "Kpeta Toyo", role: "Business Development Lead", image: "https://imgur.com/hbJ21Y0.png", linkedin: "https://www.linkedin.com/in/kpeta-toyo-b9983673/" },
+    { name: "Joshua Smooth", role: "Tech Lead", image: "https://imgur.com/rJToo6b.png", linkedin: "https://www.linkedin.com/in/smjosh/" },
+    { name: "Priscila", role: "Legal Lead", image: "https://imgur.com/qRvS5MJ.png", linkedin: "https://www.linkedin.com/in/enomfon-akpan-a9552594/" },
   ];
 
   return (
@@ -22,6 +31,32 @@ export function About() {
           </p>
         </div>
         
+        {/* Team Section */}
+        <div className="mb-24">
+          <h2 className="text-4xl font-bold text-brand-blue dark:text-white text-center mb-16">Our Team</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl text-center flex flex-col items-center border border-slate-200"
+              >
+                <div className="w-40 h-40 mx-auto rounded-full overflow-hidden mb-6 border-4 border-slate-300 dark:border-slate-700">
+                  <img src={member.image} alt={member.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                </div>
+                <h3 className="text-xl font-bold text-brand-blue dark:text-white mb-1">{member.name}</h3>
+                <p className="text-brand-green font-medium mb-4">{member.role}</p>
+                <a href={member.linkedin} className="text-brand-blue dark:text-white hover:text-brand-green transition-colors">
+                  <Linkedin className="w-6 h-6" />
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
         {/* Mission and Vision Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
           <motion.div
@@ -139,39 +174,6 @@ export function About() {
           >
             <Carousel images={journeyImages} />
             <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-[#f2fceb] dark:bg-brand-green/10 rounded-full -z-10"></div>
-          </motion.div>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="order-2 lg:order-1 relative"
-          >
-            <div className="aspect-square max-w-md mx-auto rounded-full overflow-hidden border-8 border-slate-50 dark:border-slate-800">
-              <img 
-                src="https://i.imgur.com/gVJpH9p.png" 
-                alt="Udemeobong Essien" 
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-                loading="lazy"
-              />
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="order-1 lg:order-2"
-          >
-            <h2 className="text-sm font-bold text-brand-green uppercase tracking-widest mb-3">Visionary & Founder</h2>
-            <h3 className="text-4xl font-bold text-brand-blue dark:text-white mb-6">Udemeobong Essien</h3>
-            <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-              Under the leadership of Udemeobong Essien, Scaleup Foundation has evolved from a local initiative into a global movement. His commitment to "scaling up" human potential has fueled our drive to impact over 60 countries and counting.
-            </p>
           </motion.div>
         </div>
 

@@ -16,6 +16,7 @@ import { GetInvolvedPage } from './pages/GetInvolvedPage';
 import { DonatePage } from './pages/DonatePage';
 import { ContactPage } from './pages/ContactPage';
 import { BlogPage } from './pages/BlogPage';
+import { LeapPortfolioPage } from './pages/LeapPortfolioPage';
 import { ScrollToTop } from './components/ScrollToTop';
 import { StrategicPartners } from './components/StrategicPartners';
 import { Analytics } from './components/Analytics';
@@ -43,6 +44,7 @@ export default function App() {
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/donate" element={<DonatePage />} />
               <Route path="/blog" element={<BlogPage />} />
+              <Route path="/projects/leap-portfolio" element={<LeapPortfolioPage />} />
             </Routes>
           </main>
           <BackToTopButton />

@@ -108,7 +108,7 @@ export function DeepDive() {
                 )}
 
                 {project.title === "Project Leap: 5,000 Websites Initiative" && (
-                  <div className="mt-8">
+                  <div className="mt-8 flex gap-4">
                     <a 
                       href="https://forms.gle/GtF6PLJzcG1Sexq26" 
                       target="_blank" 
@@ -116,6 +116,12 @@ export function DeepDive() {
                       className="inline-block bg-brand-green text-brand-blue font-bold px-8 py-4 rounded-full hover:bg-[#6bc239] transition-colors"
                     >
                       Apply for a free website
+                    </a>
+                    <a 
+                      href="/projects/leap-portfolio"
+                      className="inline-block bg-brand-blue text-white font-bold px-8 py-4 rounded-full hover:bg-[#0a0a8a] transition-colors"
+                    >
+                      View Portfolio
                     </a>
                   </div>
                 )}

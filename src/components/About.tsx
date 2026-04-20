@@ -14,7 +14,7 @@ export function About() {
     { name: "Jedidiah Gabriel", role: "Director of Engineering", image: "https://imgur.com/fo6hdGJ.png", linkedin: "https://www.linkedin.com/in/jedshock/" },
     { name: "Kpeta Toyo", role: "Business Development Lead", image: "https://imgur.com/hbJ21Y0.png", linkedin: "https://www.linkedin.com/in/kpeta-toyo-b9983673/" },
     { name: "Joshua Smooth", role: "Tech Lead", image: "https://imgur.com/rJToo6b.png", linkedin: "https://www.linkedin.com/in/smjosh/" },
-    { name: "Priscila", role: "Legal Lead", image: "https://imgur.com/qRvS5MJ.png", linkedin: "https://www.linkedin.com/in/enomfon-akpan-a9552594/" },
+    { name: "Priscila", role: "Legal Lead", image: "https://imgur.com/qRvS5MJ.png", linkedin: "https://www.linkedin.com/in/priscilla-yakubu-7448b5277/" },
   ];
 
   return (

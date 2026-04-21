@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function DeepDive() {
   const projects = [
@@ -117,12 +118,12 @@ export function DeepDive() {
                     >
                       Apply for a free website
                     </a>
-                    <a 
-                      href="/projects/leap-portfolio"
+                    <Link 
+                      to="/projects/leap-portfolio"
                       className="inline-block bg-brand-blue text-white font-bold px-8 py-4 rounded-full hover:bg-[#0a0a8a] transition-colors"
                     >
                       View Portfolio
-                    </a>
+                    </Link>
                   </div>
                 )}
               </motion.div>

@@ -10,7 +10,7 @@ const websites = [
 
 export function LeapPortfolioPage() {
   return (
-    <section className="py-24 bg-slate-50 dark:bg-slate-900 transition-colors duration-300 min-h-screen">
+    <section className="pt-32 pb-24 bg-slate-50 dark:bg-slate-900 transition-colors duration-300 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -32,7 +32,21 @@ export function LeapPortfolioPage() {
               transition={{ delay: index * 0.1 }}
               className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-shadow"
             >
-              <h3 className="text-xl font-bold text-brand-blue dark:text-white mb-4">{site.name}</h3>
+              <div className="flex items-center gap-4 mb-4">
+                <h3 className="text-xl font-bold text-brand-blue dark:text-white">{site.name}</h3>
+                {site.name === "Scaleup Foundation" && (
+                  <img src="https://i.imgur.com/FRGNYXB.png" alt="Scaleup Foundation Logo" className="h-24 w-auto ml-4" />
+                )}
+                {site.name === "EFG Concept" && (
+                  <img src="https://i.imgur.com/IRxVXpD.png" alt="EFG Concept Logo" className="h-24 w-auto ml-4" />
+                )}
+                {site.name === "HFA Initiative" && (
+                  <img src="https://i.imgur.com/Rv6dZ9C.png" alt="HFA Initiative Logo" className="h-24 w-auto ml-4" />
+                )}
+                {site.name === "Dynamic Service Timer" && (
+                  <img src="https://i.imgur.com/7NZnxOt.png" alt="Dynamic Service Timer Logo" className="h-24 w-auto ml-4" />
+                )}
+              </div>
               <a 
                 href={site.url} 
                 target="_blank" 

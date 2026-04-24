@@ -102,8 +102,8 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-brand-blue dark:text-white mb-1">Call Us</h4>
-                  <a href="tel:+2349039847030" className="text-slate-600 dark:text-slate-400 hover:text-brand-green transition-colors">
-                    +234 903 984 7030
+                  <a href="tel:+2348121264563" className="text-slate-600 dark:text-slate-400 hover:text-brand-green transition-colors">
+                    +234 812 126 4563
                   </a>
                 </div>
               </div>

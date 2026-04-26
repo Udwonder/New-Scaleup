@@ -2,10 +2,10 @@ import { motion } from 'motion/react';
 import { ExternalLink } from 'lucide-react';
 
 const websites = [
-  { name: "Scaleup Foundation", url: "https://www.scaleupfoundation.org/" },
-  { name: "EFG Concept", url: "https://www.efgconcept.com/" },
-  { name: "HFA Initiative", url: "https://www.hfainitiative.org/" },
-  { name: "Dynamic Service Timer", url: "https://dynamic-service-timer-906752647479.us-west1.run.app/" },
+  { name: "Scaleup Foundation", url: "https://www.scaleupfoundation.org/", logo: "https://i.imgur.com/FRGNYXB.png" },
+  { name: "EFG Concept", url: "https://www.efgconcept.com/", logo: "https://i.imgur.com/IRxVXpD.png" },
+  { name: "HFA Initiative", url: "https://www.hfainitiative.org/", logo: "https://i.imgur.com/Rv6dZ9C.png" },
+  { name: "Dynamic Service Timer", url: "https://dynamic-service-timer-906752647479.us-west1.run.app/", logo: "https://i.imgur.com/7NZnxOt.png" },
 ];
 
 export function LeapPortfolioPage() {
@@ -30,28 +30,19 @@ export function LeapPortfolioPage() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-shadow"
+              className="group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl hover:border-brand-green/30 transition-all duration-300"
             >
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center gap-4 mb-6">
                 <h3 className="text-xl font-bold text-brand-blue dark:text-white">{site.name}</h3>
-                {site.name === "Scaleup Foundation" && (
-                  <img src="https://i.imgur.com/FRGNYXB.png" alt="Scaleup Foundation Logo" className="h-24 w-auto ml-4" />
-                )}
-                {site.name === "EFG Concept" && (
-                  <img src="https://i.imgur.com/IRxVXpD.png" alt="EFG Concept Logo" className="h-24 w-auto ml-4" />
-                )}
-                {site.name === "HFA Initiative" && (
-                  <img src="https://i.imgur.com/Rv6dZ9C.png" alt="HFA Initiative Logo" className="h-24 w-auto ml-4" />
-                )}
-                {site.name === "Dynamic Service Timer" && (
-                  <img src="https://i.imgur.com/7NZnxOt.png" alt="Dynamic Service Timer Logo" className="h-24 w-auto ml-4" />
+                {site.logo && (
+                  <img src={site.logo} alt={`${site.name} Logo`} className="h-16 w-auto ml-auto" />
                 )}
               </div>
               <a 
                 href={site.url} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="inline-flex items-center text-brand-green font-semibold hover:underline"
+                className="inline-flex items-center text-brand-green font-semibold hover:text-brand-blue dark:hover:text-white transition-colors"
               >
                 Visit Website <ExternalLink className="w-4 h-4 ml-2" />
               </a>

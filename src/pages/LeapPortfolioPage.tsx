@@ -2,10 +2,11 @@ import { motion } from 'motion/react';
 import { ExternalLink } from 'lucide-react';
 
 const websites = [
-  { name: "Scaleup Foundation", url: "https://www.scaleupfoundation.org/", logo: "https://i.imgur.com/FRGNYXB.png" },
+  { name: "Scaleup Foundation", url: "https://www.scaleupfoundation.org/", logo: "https://i.imgur.com/uHdwF2v.png" },
   { name: "EFG Concept", url: "https://www.efgconcept.com/", logo: "https://i.imgur.com/IRxVXpD.png" },
   { name: "HFA Initiative", url: "https://www.hfainitiative.org/", logo: "https://i.imgur.com/Rv6dZ9C.png" },
   { name: "Dynamic Service Timer", url: "https://dynamic-service-timer-906752647479.us-west1.run.app/", logo: "https://i.imgur.com/7NZnxOt.png" },
+  { name: "Khenti Books", url: "https://khenti-books-4anb.vercel.app/", logo: "https://i.imgur.com/q7x9LEj.png" },
 ];
 
 export function LeapPortfolioPage() {
@@ -35,7 +36,7 @@ export function LeapPortfolioPage() {
               <div className="flex items-center gap-4 mb-6">
                 <h3 className="text-xl font-bold text-brand-blue dark:text-white">{site.name}</h3>
                 {site.logo && (
-                  <img src={site.logo} alt={`${site.name} Logo`} className="h-16 w-auto ml-auto" />
+                  <img src={site.logo} alt={`${site.name} Logo`} className={`${(site.name === "Khenti Books" || site.name === "Scaleup Foundation") ? "h-32" : "h-16"} w-auto ml-auto ${site.name === "Scaleup Foundation" ? "mt-4" : ""}`} />
                 )}
               </div>
               <a 

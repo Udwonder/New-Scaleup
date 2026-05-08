@@ -6,7 +6,7 @@ const websites = [
   { name: "EFG Concept", url: "https://www.efgconcept.com/", logo: "https://i.imgur.com/IRxVXpD.png" },
   { name: "HFA Initiative", url: "https://www.hfainitiative.org/", logo: "https://i.imgur.com/Rv6dZ9C.png" },
   { name: "Dynamic Service Timer", url: "https://dynamic-service-timer-906752647479.us-west1.run.app/", logo: "https://i.imgur.com/7NZnxOt.png" },
-  { name: "Khenti Books", url: "https://khenti-books-4anb.vercel.app/", logo: "https://i.imgur.com/q7x9LEj.png" },
+  { name: "Khenti Books", url: "https://www.khentibooks.store/", logo: "https://i.imgur.com/q7x9LEj.png" },
 ];
 
 export function LeapPortfolioPage() {

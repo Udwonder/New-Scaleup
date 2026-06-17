@@ -6,7 +6,7 @@ export function WhatsAppButton() {
       href="https://wa.me/2348121264563"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-24 right-8 z-50 p-3 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#128C7E] transition-colors"
+      className="fixed bottom-8 right-8 z-50 p-3 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#128C7E] transition-colors"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       aria-label="Chat on WhatsApp"

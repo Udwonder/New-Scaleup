@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { Target, Eye, Users, Leaf, Zap, Rocket, Linkedin } from 'lucide-react';
 import { Carousel } from './Carousel';
+import { Image } from './ui/Image';
 
 export function About() {
   const journeyImages = [
@@ -45,7 +46,7 @@ export function About() {
                 className="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl text-center flex flex-col items-center border border-slate-200"
               >
                 <div className="w-40 h-40 mx-auto rounded-full overflow-hidden mb-6 border-4 border-slate-300 dark:border-slate-700">
-                  <img src={member.image} alt={member.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <Image src={member.image} alt={member.name} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <h3 className="text-xl font-bold text-brand-blue dark:text-white mb-1">{member.name}</h3>
                 <p className="text-brand-green font-medium mb-4">{member.role}</p>

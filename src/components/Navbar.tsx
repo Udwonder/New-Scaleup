@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from './ThemeProvider';
+import { Image } from './ui/Image';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,12 +40,11 @@ export function Navbar() {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <img 
+              <Image 
                 src={theme === 'dark' ? "https://i.imgur.com/xrmdocL.png" : "https://i.imgur.com/FRGNYXB.png"}
                 alt="Scaleup Foundation" 
                 className="h-20 w-auto"
                 referrerPolicy="no-referrer"
-                loading="lazy"
               />
             </Link>
           </div>

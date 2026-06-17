@@ -2,22 +2,8 @@ import express from "express";
 import { createServer as createViteServer } from "vite";
 import path from "path";
 import { fileURLToPath } from "url";
-import Stripe from "stripe";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-// Initialize Stripe lazily
-let stripeClient: Stripe | null = null;
-function getStripe(): Stripe {
-  if (!stripeClient) {
-    const key = process.env.STRIPE_SECRET_KEY;
-    if (!key) {
-      console.warn("STRIPE_SECRET_KEY is not set. Stripe functionality will be disabled.");
-    }
-    stripeClient = new Stripe(key || "dummy_key_for_no_crash");
-  }
-  return stripeClient;
-}
 
 async function startServer() {
   const app = express();
@@ -30,35 +16,6 @@ async function startServer() {
     const { firstName, lastName, email, subject, message } = req.body;
     console.log("Contact form submission:", { firstName, lastName, email, subject, message });
     res.json({ success: true, message: "Message received!" });
-  });
-
-  // Stripe checkout session
-  app.post("/api/create-checkout-session", async (req, res) => {
-    try {
-      const { amount, currency } = req.body;
-      const session = await getStripe().checkout.sessions.create({
-        payment_method_types: ['card'],
-        line_items: [
-          {
-            price_data: {
-              currency: currency.toLowerCase(),
-              product_data: {
-                name: 'Donation to Scaleup Foundation',
-              },
-              unit_amount: amount * 100, // Stripe expects amount in cents
-            },
-            quantity: 1,
-          },
-        ],
-        mode: 'payment',
-        success_url: `${process.env.APP_URL}/donate?success=true`,
-        cancel_url: `${process.env.APP_URL}/donate?canceled=true`,
-      });
-      res.json({ id: session.id });
-    } catch (error) {
-      console.error("Stripe error:", error);
-      res.status(500).json({ error: "Failed to create checkout session" });
-    }
   });
 
   // Vite middleware for development

@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Heart, X, Copy, Check } from 'lucide-react';
 
 const bankDetails = {
-  GBP: { sign: '£', name: 'Sterling Bank Plc', accountName: 'Scaleup Foundation LTD GTE', accountNumber: '0132115220', branch: 'Jabi Branch', branchCode: '232080157', swift: 'NAMENGLA', sortCode: '232010017' },
-  EUR: { sign: '€', name: 'Sterling Bank Plc', accountName: 'Scaleup Foundation LTD GTE', accountNumber: '0132115330', branch: 'Jabi Branch', branchCode: '232080157', swift: 'NAMENGLA', sortCode: '232010017' },
-  USD: { sign: '$', name: 'Sterling Bank Plc', accountName: 'Scaleup Foundation LTD GTE', accountNumber: '0132115055', branch: 'Jabi Branch', branchCode: '232080157', swift: 'NAMENGLA', sortCode: '232010017' },
-  NGN: { sign: '₦', name: 'Sterling Bank Plc', accountName: 'Scaleup Foundation LTD GTE', accountNumber: '0131896117', branch: 'Jabi Branch', branchCode: '232080157', swift: 'NAMENGLA', sortCode: '232010017' },
+  GBP: { sign: '£', name: 'Sterling Bank Plc', accountName: 'ScaleUp LTD GTE', accountNumber: '0132115220', branch: 'Jabi Branch', branchCode: '232080157', swift: 'NAMENGLA', sortCode: '232010017' },
+  EUR: { sign: '€', name: 'Sterling Bank Plc', accountName: 'ScaleUp LTD GTE', accountNumber: '0132115330', branch: 'Jabi Branch', branchCode: '232080157', swift: 'NAMENGLA', sortCode: '232010017' },
+  USD: { sign: '$', name: 'Sterling Bank Plc', accountName: 'ScaleUp LTD GTE', accountNumber: '0132115055', branch: 'Jabi Branch', branchCode: '232080157', swift: 'NAMENGLA', sortCode: '232010017' },
+  NGN: { sign: '₦', name: 'Sterling Bank Plc', accountName: 'ScaleUp LTD GTE', accountNumber: '0131896117', branch: 'Jabi Branch', branchCode: '232080157', swift: 'NAMENGLA', sortCode: '232010017' },
 };
 
 export function DonateModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {

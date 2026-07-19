@@ -20,8 +20,8 @@ export function Footer() {
           <div className="text-center md:text-left">
             <Link to="/" className="mb-4 inline-block">
               <img 
-                src="https://i.imgur.com/xrmdocL.png" 
-                alt="Scaleup Foundation" 
+                src="https://i.imgur.com/DLdYaJy.png" 
+                alt="ScaleUp" 
                 className="h-20 w-auto"
                 referrerPolicy="no-referrer"
                 loading="lazy"
@@ -90,7 +90,7 @@ export function Footer() {
         </div>
         
         <div className="mt-12 pt-8 border-t border-[#0a0a8a] text-center text-sm text-slate-500">
-          <p>Built with ❤️ by <a href="https://www.scaleupfoundation.org/" target="_blank" rel="noopener noreferrer" className="text-brand-green hover:text-brand-green transition-colors">Scaleup Foundation</a></p>
+          <p>Built with ❤️ by <a href="https://www.scaleupfoundation.org/" target="_blank" rel="noopener noreferrer" className="text-brand-green hover:text-brand-green transition-colors">ScaleUp</a></p>
         </div>
       </div>
     </footer>

@@ -41,8 +41,8 @@ export function Navbar() {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <Image 
-                src={theme === 'dark' ? "https://i.imgur.com/xrmdocL.png" : "https://i.imgur.com/FRGNYXB.png"}
-                alt="Scaleup Foundation" 
+                src={theme === 'dark' ? "https://i.imgur.com/DLdYaJy.png" : "https://i.imgur.com/ZlaTOUV.png"}
+                alt="ScaleUp" 
                 className="h-20 w-auto"
                 referrerPolicy="no-referrer"
               />

@@ -19,7 +19,7 @@ const testimonials = [
   },
   {
     id: 3,
-    quote: "Partnering with Scaleup Foundation has been incredibly rewarding. Their commitment to empowering the next generation is truly inspiring.",
+    quote: "Partnering with ScaleUp has been incredibly rewarding. Their commitment to empowering the next generation is truly inspiring.",
     author: "Elena R.",
     role: "Corporate Partner",
     image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=200&auto=format&fit=crop"

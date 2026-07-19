@@ -3,11 +3,12 @@ import { ExternalLink } from 'lucide-react';
 import { Image } from '../components/ui/Image';
 
 const websites = [
-  { name: "Scaleup Foundation", url: "https://www.scaleupfoundation.org/", logo: "https://i.imgur.com/uHdwF2v.png" },
+  { name: "ScaleUp", url: "https://www.scaleupfoundation.org/", logo: "https://i.imgur.com/nklqKhk.png" },
   { name: "EFG Concept", url: "https://www.efgconcept.com/", logo: "https://i.imgur.com/IRxVXpD.png" },
   { name: "HFA Initiative", url: "https://www.hfainitiative.org/", logo: "https://i.imgur.com/Rv6dZ9C.png" },
   { name: "Dynamic Service Timer", url: "https://dynamic-service-timer-906752647479.us-west1.run.app/", logo: "https://i.imgur.com/7NZnxOt.png" },
   { name: "Khenti Books", url: "https://www.khentibooks.store/", logo: "https://i.imgur.com/q7x9LEj.png" },
+  { name: "John Kaka & Co Autos", url: "https://www.johnkakaandcoautos.com/", logo: "https://i.imgur.com/fRdS38r.jpeg" },
 ];
 
 export function LeapPortfolioPage() {
@@ -32,12 +33,12 @@ export function LeapPortfolioPage() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
-              className="group bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl hover:border-brand-green/30 transition-all duration-300"
+              className="group bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-xl hover:border-brand-green/30 transition-all duration-300"
             >
               <div className="flex items-center gap-4 mb-6">
                 <h3 className="text-xl font-bold text-brand-blue dark:text-white">{site.name}</h3>
                 {site.logo && (
-                  <Image src={site.logo} alt={`${site.name} Logo`} className={`${(site.name === "Khenti Books" || site.name === "Scaleup Foundation") ? "h-32" : "h-16"} w-auto ml-auto ${site.name === "Scaleup Foundation" ? "mt-4" : ""}`} />
+                  <Image src={site.logo} alt={`${site.name} Logo`} className={`${site.name === "ScaleUp" ? "h-32" : (site.name === "Khenti Books" ? "h-24" : "h-16")} w-auto ml-auto`} />
                 )}
               </div>
               <a 

@@ -25,10 +25,10 @@ export function About() {
           <h1 className="text-5xl font-bold text-brand-blue dark:text-white mb-6">About Us</h1>
           <div className="w-24 h-1 bg-brand-green mx-auto rounded-full mb-12"></div>
           <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed mb-6">
-            At Scaleup Foundation, we empower individuals and communities by addressing critical skill gaps through targeted training and education. We equip people with the tools they need to thrive in today's evolving job market and foster economic empowerment.
+            At ScaleUp, we empower individuals and communities by addressing critical skill gaps through targeted training and education. We equip people with the tools they need to thrive in today's evolving job market and foster economic empowerment.
           </p>
           <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
-            We are saddled with a responsibility at Scaleup Foundation to bridge the gap between potential and opportunity. We believe that everyone deserves the chance to develop their skills and contribute meaningfully to society, regardless of their background or circumstances.
+            We are saddled with a responsibility at ScaleUp to bridge the gap between potential and opportunity. We believe that everyone deserves the chance to develop their skills and contribute meaningfully to society, regardless of their background or circumstances.
           </p>
         </div>
         
@@ -101,7 +101,7 @@ export function About() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed"
             >
-              Scaleup Foundation was born from a simple truth: talent is universal, but opportunity is not. We provide the tools, technology, and training necessary for individuals in underserved communities to thrive in a rapidly evolving world. By democratizing access to digital skills and resources, we empower the next generation of innovators to turn their local potential into global impact.
+              ScaleUp was born from a simple truth: talent is universal, but opportunity is not. We provide the tools, technology, and training necessary for individuals in underserved communities to thrive in a rapidly evolving world. By democratizing access to digital skills and resources, we empower the next generation of innovators to turn their local potential into global impact.
             </motion.p>
           </motion.div>
 
@@ -179,7 +179,7 @@ export function About() {
         </div>
 
         <div className="mt-24 bg-gradient-to-br from-brand-blue to-slate-900 p-12 rounded-3xl text-white">
-          <h2 className="text-4xl font-bold mb-12 text-center">Why Partner With Scaleup Foundation?</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center">Why Partner With ScaleUp?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 p-8 rounded-2xl backdrop-blur-sm">
               <Users className="w-12 h-12 text-brand-green mb-6" />

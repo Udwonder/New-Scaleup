@@ -6,7 +6,7 @@ const websites = [
   { name: "ScaleUp", url: "https://www.scaleupfoundation.org/", logo: "https://i.imgur.com/nklqKhk.png" },
   { name: "EFG Concept", url: "https://www.efgconcept.com/", logo: "https://i.imgur.com/IRxVXpD.png" },
   { name: "HFA Initiative", url: "https://www.hfainitiative.org/", logo: "https://i.imgur.com/Rv6dZ9C.png" },
-  { name: "Dynamic Service Timer", url: "https://dynamic-service-timer-906752647479.us-west1.run.app/", logo: "https://i.imgur.com/7NZnxOt.png" },
+  { name: "MBassey Farming Venture Limited", url: "https://m-basssey.vercel.app/", logo: "https://i.imgur.com/4Wp0eRt.png" },
   { name: "Khenti Books", url: "https://www.khentibooks.store/", logo: "https://i.imgur.com/q7x9LEj.png" },
   { name: "John Kaka & Co Autos", url: "https://www.johnkakaandcoautos.com/", logo: "https://i.imgur.com/fRdS38r.jpeg" },
 ];
@@ -38,7 +38,7 @@ export function LeapPortfolioPage() {
               <div className="flex items-center gap-4 mb-6">
                 <h3 className="text-xl font-bold text-brand-blue dark:text-white">{site.name}</h3>
                 {site.logo && (
-                  <Image src={site.logo} alt={`${site.name} Logo`} className={`${site.name === "ScaleUp" ? "h-32" : (site.name === "Khenti Books" ? "h-24" : "h-16")} w-auto ml-auto`} />
+                  <Image src={site.logo} alt={`${site.name} Logo`} className={`${site.name === "ScaleUp" ? "h-32" : (site.name === "Khenti Books" ? "h-24" : (site.name === "MBassey Farming Venture Limited" ? "h-24" : "h-16"))} w-auto ml-auto`} />
                 )}
               </div>
               <a 

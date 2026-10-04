@@ -78,8 +78,8 @@ export function Contact() {
                 <div>
                   <h4 className="text-lg font-bold text-brand-blue dark:text-white mb-1">Our Headquarters</h4>
                   <p className="text-slate-600 dark:text-slate-400">
-                    25 Yakubu Gowon Crescent,<br />
-                    Asokoro, Abuja, Nigeria.
+                    2nd Floor Wing B, FEMA Building, Plot 114 Yakubu Gowon Cres,<br />
+                    beside Four Square Church, Asokoro, Abuja 900231, FCT.
                   </p>
                 </div>
               </div>

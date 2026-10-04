@@ -50,8 +50,8 @@ export function Footer() {
             <a href="https://maps.app.goo.gl/TCV3nHfTSCbGTEHx7" target="_blank" rel="noopener noreferrer" className="text-sm mb-4 flex items-start justify-center md:justify-start hover:text-brand-green transition-colors">
               <MapPin size={16} className="mr-2 mt-0.5 flex-shrink-0 text-brand-green" />
               <span>
-                25 Yakubu Gowon Crescent,<br />
-                Asokoro, Abuja, Nigeria.
+                2nd Floor Wing B, FEMA Building, Plot 114 Yakubu Gowon Cres,<br />
+                beside Four Square Church, Asokoro, Abuja 900231, Federal Capital Territory.
               </span>
             </a>
             <p className="text-sm mb-2 flex items-center justify-center md:justify-start">

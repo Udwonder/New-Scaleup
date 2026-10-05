@@ -1,14 +1,8 @@
 import { motion } from 'motion/react';
 
 const partnerLogos = [
-  "https://imgur.com/r27St9Z.png",
-  "https://imgur.com/PSarp5f.png",
-  "https://imgur.com/qued5Sa.png",
-  "https://imgur.com/AMiRcHA.png",
-  "https://imgur.com/n1DT031.png",
   "https://imgur.com/XAUoFTg.png",
   "https://imgur.com/5m2xQiC.png",
-  "https://imgur.com/NcWSeoq.png",
   "https://imgur.com/KjCTu0G.png",
   "https://imgur.com/2V7f1Cf.png",
   "https://imgur.com/4JbyI23.png",

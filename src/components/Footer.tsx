@@ -62,7 +62,7 @@ export function Footer() {
               <Phone size={16} className="mr-2 flex-shrink-0 text-brand-green" />
               <a href="tel:+2348121264563" className="hover:text-brand-green transition-colors">+234 812 126 4563</a>
             </p>
-            <a href="https://share.google/PG0s3cVNsmnXhsa9I" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm hover:text-brand-green transition-colors">
+            <a href="https://www.google.com/search?q=ScaleUp&stick=H4sIAAAAAAAA_-NgU1I1qDA0MEk1SDJLSzRPM0kxMDG1MqgwMzJJNDAxNzVPNTU0tUw0XsTKHpycmJMaWgAA3fllZTMAAAA&hl=en&mat=CWWjW9_257EDElYBzAmVZngmeIy8TAxWqe143VtrRQwjSBra0DVR-mhOFpx0oEX2zY4AW8JmHniOtIjKG00BlN4nOM15CpIjKz5V_ymKfU4i8mSAnhPQxwQCPFZMuYbDrQ&authuser=0&ved=1t:350944" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm hover:text-brand-green transition-colors">
               <MapPin size={16} className="mr-2 text-brand-green" />
               Google Business Profile
             </a>
